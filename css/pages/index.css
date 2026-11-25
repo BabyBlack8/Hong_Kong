@@ -1,0 +1,17 @@
+/* =========================================================
+   PÁGINA: INICIO
+========================================================= */
+
+/* Palabra destacada del título de portada */
+.fh5co-cover h1 em {
+    font-size: 1.15em;
+}
+
+/* Productos destacados */
+#fh5co-featured-menu .fh5co-heading p {
+    max-width: 520px;
+}
+
+#fh5co-featured-menu .fh5co-item h3 {
+    font-size: 26px;
+}

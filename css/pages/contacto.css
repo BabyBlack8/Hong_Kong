@@ -1,0 +1,21 @@
+/* =========================================================
+   PÁGINA: CONTACTO
+========================================================= */
+
+/* Tarjetas de información (Ubicación, Teléfono, Horarios) */
+.info-card {
+    min-height: 190px;
+    padding: 36px 22px;
+    border-top: 5px solid var(--color-acento);
+    text-align: center;
+}
+
+.info-card h3 {
+    margin-bottom: 12px;
+    color: var(--color-principal);
+    font-size: 26px;
+}
+
+.info-card p {
+    margin-bottom: 0;
+}

@@ -1,0 +1,143 @@
+/* =========================================================
+   PÁGINA: MENÚ
+========================================================= */
+
+
+/* ---------- Barra de categorías (se queda pegada arriba al hacer scroll) ---------- */
+
+.menu-categorias {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: var(--color-blanco);
+    border-bottom: 1px solid var(--color-borde);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.menu-categorias ul {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 12px 0;
+    list-style: none;
+    overflow-x: auto;
+    justify-content: center;
+    scrollbar-width: none;
+}
+
+.menu-categorias ul::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-categorias a {
+    display: block;
+    padding: 8px 20px;
+    border: 2px solid var(--color-borde);
+    border-radius: 50px;
+    color: var(--color-negro);
+    font-size: 14px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.menu-categorias a:hover {
+    border-color: var(--color-principal);
+    color: var(--color-principal);
+}
+
+.menu-categorias a.active {
+    border-color: var(--color-principal);
+    background: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+
+/* ---------- Carrusel de categorías ---------- */
+
+#menuCarousel {
+    overflow: hidden;
+    border-radius: var(--radio);
+    background: var(--color-principal-hover);
+    box-shadow: var(--sombra-fuerte);
+}
+
+#menuCarousel .item {
+    position: relative;
+    min-height: 430px;
+    background: linear-gradient(135deg, #8e0d18 0%, #b3121f 60%, #d7263d 100%);
+}
+
+#menuCarousel .item img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+#menuCarousel .item.sin-imagen img {
+    display: none;
+}
+
+/* degradado oscuro para que se lea el texto */
+#menuCarousel .item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(42, 14, 17, 0.85), rgba(42, 14, 17, 0.05));
+    pointer-events: none;
+}
+
+#menuCarousel .carousel-caption {
+    z-index: 2;
+    bottom: 60px;
+    text-shadow: none;
+}
+
+#menuCarousel .carousel-caption h3 {
+    margin-bottom: 10px;
+    color: var(--color-blanco);
+    font-size: 44px;
+}
+
+#menuCarousel .carousel-caption p {
+    color: var(--color-blanco);
+    font-size: 18px;
+}
+
+#menuCarousel .carousel-caption .btn {
+    margin-top: 6px;
+}
+
+#menuCarousel .carousel-indicators {
+    z-index: 3;
+}
+
+#menuCarousel .carousel-indicators li {
+    border-color: var(--color-blanco);
+}
+
+#menuCarousel .carousel-indicators .active {
+    border-color: var(--color-acento);
+    background: var(--color-acento);
+}
+
+#menuCarousel .carousel-control {
+    z-index: 3;
+    background: none;
+    opacity: 0.85;
+}
+
+#menuCarousel .carousel-control:hover {
+    opacity: 1;
+}
+
+
+/* ---------- Secciones de productos ---------- */
+
+.menu-seccion {
+    padding: 75px 0;
+    scroll-margin-top: 70px;      /* deja espacio para la barra de categorías */
+}
+
+.menu-seccion .fh5co-heading {
+    margin-bottom: 35px;
+}

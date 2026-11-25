@@ -1,0 +1,44 @@
+/* =========================================================
+   VARIABLES · Paleta y tipografía de Hong Kong
+   Cambia aquí un color o una fuente y se actualiza en todo el sitio.
+========================================================= */
+
+:root {
+
+    /* --- Rojo (color de marca) --- */
+    --color-principal: #b3121f;
+    --color-principal-hover: #8e0d18;
+    --color-rojo-suave: #fdeceb;      /* fondos suaves / estados de error */
+
+    /* --- Blancos y cremas --- */
+    --color-blanco: #ffffff;
+    --color-secundario: #fff6e8;      /* crema: fondo de secciones alternas */
+
+    /* --- Dorado (acento, combina con el rojo del logo) --- */
+    --color-acento: #f5b721;
+    --color-acento-hover: #dc9f0b;
+    --color-acento-texto: #3b2300;    /* texto sobre fondo dorado */
+
+    /* --- Neutros cálidos --- */
+    --color-negro: #2a1715;           /* títulos */
+    --color-texto: #5e4b48;           /* párrafos */
+    --color-gris: #8a7774;
+    --color-borde: #ecdcd3;
+    --color-oscuro: #2a0e11;          /* footer */
+
+    /* --- Tipografías --- */
+    --fuente-principal: 'Playfair Display', Georgia, serif;          /* títulos */
+    --fuente-cuerpo: 'Nunito', 'Segoe UI', Arial, sans-serif;        /* textos */
+    --fuente-secundaria: 'Satisfy', cursive;                         /* acentos */
+
+    /* --- Efectos --- */
+    --sombra: 0 6px 24px rgba(120, 20, 25, 0.10);
+    --sombra-fuerte: 0 14px 34px rgba(120, 20, 25, 0.20);
+    --transicion: all 0.3s ease;
+    --radio: 14px;
+
+    /* --- Imagen de cabecera (portada de todas las páginas) ---
+       Para usar otra foto, cambia solo esta ruta.
+       La ruta es relativa a la carpeta css/ */
+    --hero-img: url("../assets/img/banners/logo-hong-kong.jpeg");
+}

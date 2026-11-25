@@ -1,0 +1,247 @@
+/* =========================================================
+   RESPONSIVE (se carga al final para poder sobrescribir)
+   Tablets ≤ 991px · Celulares ≤ 767px · Celulares chicos ≤ 480px
+========================================================= */
+
+
+/* ---------- TABLETS ---------- */
+
+@media screen and (max-width: 991px) {
+
+    .fh5co-section {
+        padding: 65px 0;
+    }
+
+    .fh5co-cover {
+        min-height: 540px;
+    }
+
+    .fh5co-cover-sm {
+        min-height: 320px;
+    }
+
+    .fh5co-text {
+        padding: 10px 0 20px;
+    }
+
+    .img-frame {
+        height: 340px;
+        margin-bottom: 30px;
+        box-shadow: 8px 8px 0 var(--color-acento);
+    }
+
+    /* columnas apiladas: separación entre campos del formulario */
+    .form-card .col-md-6 + .col-md-6 {
+        margin-top: 22px;
+    }
+
+    .info-card,
+    .value-card {
+        min-height: auto;
+    }
+
+    #menuCarousel .item,
+    #menuCarousel .item img {
+        height: 370px;
+        min-height: 370px;
+    }
+
+    #menuCarousel .carousel-caption h3 {
+        font-size: 36px;
+    }
+
+    .menu-seccion {
+        padding: 60px 0;
+    }
+
+    .menu-categorias ul {
+        justify-content: flex-start;
+    }
+}
+
+
+/* ---------- CELULARES ---------- */
+
+@media screen and (max-width: 767px) {
+
+    .fh5co-nav {
+        padding: 12px 0 6px;
+    }
+
+    #fh5co-logo a {
+        font-size: 32px;
+    }
+
+    .menu-1 ul {
+        gap: 2px 4px;
+    }
+
+    .menu-1 ul li a {
+        padding: 8px 8px;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+    }
+
+    .menu-1 ul li:not(.btn-cta) a::after {
+        left: 8px;
+        right: 8px;
+    }
+
+    .menu-1 ul li.btn-cta {
+        margin-left: 0;
+    }
+
+    .menu-1 ul li.btn-cta a {
+        padding: 8px 14px;
+    }
+
+    .fh5co-cover {
+        min-height: 470px;
+    }
+
+    .fh5co-cover-sm {
+        min-height: 280px;
+    }
+
+    .fh5co-cover h2 {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    .fh5co-section {
+        padding: 50px 0;
+    }
+
+    .fh5co-heading {
+        margin-bottom: 30px;
+    }
+
+    .fh5co-heading h2,
+    .fh5co-text h2,
+    .fh5co-cta h2 {
+        font-size: 32px;
+    }
+
+    .fh5co-cta p {
+        font-size: 16px;
+    }
+
+    .img-frame {
+        height: 280px;
+    }
+
+    .fh5co-item-img {
+        height: 210px;
+    }
+
+    .fh5co-item h3 {
+        font-size: 23px;
+    }
+
+    .form-card {
+        padding: 26px 18px;
+    }
+
+    #fh5co-footer {
+        padding: 45px 0 20px;
+    }
+
+    #fh5co-footer .fh5co-widget {
+        margin-bottom: 25px;
+    }
+
+    #menuCarousel .item,
+    #menuCarousel .item img {
+        height: 310px;
+        min-height: 310px;
+    }
+
+    #menuCarousel .carousel-caption {
+        bottom: 42px;
+        padding-bottom: 10px;
+    }
+
+    #menuCarousel .carousel-caption h3 {
+        margin-bottom: 6px;
+        font-size: 29px;
+    }
+
+    #menuCarousel .carousel-caption p {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    #menuCarousel .carousel-caption .btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .menu-seccion {
+        padding: 45px 0;
+    }
+}
+
+
+/* ---------- CELULARES PEQUEÑOS ---------- */
+
+@media screen and (max-width: 480px) {
+
+    #fh5co-logo a {
+        font-size: 29px;
+    }
+
+    .menu-1 ul li a {
+        padding: 7px 6px;
+        font-size: 11px;
+    }
+
+    .menu-1 ul li.btn-cta a {
+        padding: 7px 11px;
+    }
+
+    .btn-lg {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    .fh5co-heading h2,
+    .fh5co-text h2,
+    .fh5co-cta h2 {
+        font-size: 28px;
+    }
+
+    .form-card {
+        padding: 22px 15px;
+    }
+
+    .form-card .form-control {
+        font-size: 14px;
+    }
+
+    #menuCarousel .item,
+    #menuCarousel .item img {
+        height: 270px;
+        min-height: 270px;
+    }
+
+    #menuCarousel .carousel-caption {
+        bottom: 34px;
+    }
+
+    #menuCarousel .carousel-caption h3 {
+        font-size: 23px;
+    }
+
+    #menuCarousel .carousel-caption p {
+        font-size: 12px;
+    }
+
+    #menuCarousel .carousel-caption .btn {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    #menuCarousel .carousel-indicators {
+        bottom: 0;
+    }
+}
