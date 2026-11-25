@@ -1,12 +1,3 @@
-/* =========================================================
-   ESTILOS GENERALES (se usan en todas las páginas)
-   Orden de carga en el HTML:
-   bootstrap → variables → style → pages/xxx → responsive
-========================================================= */
-
-
-/* ---------- BASE ---------- */
-
 html {
     scroll-behavior: smooth;
 }

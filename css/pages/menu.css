@@ -1,10 +1,3 @@
-/* =========================================================
-   PÁGINA: MENÚ
-========================================================= */
-
-
-/* ---------- Barra de categorías (se queda pegada arriba al hacer scroll) ---------- */
-
 .menu-categorias {
     position: sticky;
     top: 0;
@@ -51,9 +44,6 @@
     color: var(--color-blanco);
 }
 
-
-/* ---------- Carrusel de categorías ---------- */
-
 #menuCarousel {
     overflow: hidden;
     border-radius: var(--radio);
@@ -77,7 +67,6 @@
     display: none;
 }
 
-/* degradado oscuro para que se lea el texto */
 #menuCarousel .item::after {
     content: "";
     position: absolute;
@@ -131,11 +120,9 @@
 }
 
 
-/* ---------- Secciones de productos ---------- */
-
 .menu-seccion {
     padding: 75px 0;
-    scroll-margin-top: 70px;      /* deja espacio para la barra de categorías */
+    scroll-margin-top: 70px;     
 }
 
 .menu-seccion .fh5co-heading {

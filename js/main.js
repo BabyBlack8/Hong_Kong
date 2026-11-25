@@ -1,31 +1,13 @@
-/* =========================================================
-   MAIN.JS · se carga en TODAS las páginas, antes que js/pages/*.js
-
-   1. Configuración del sitio y funciones compartidas  → objeto HK
-   2. Animación de los bloques al hacer scroll
-   3. Botón "subir"
-   4. Imágenes de reemplazo cuando falta una foto
-   5. Año automático en el footer
-========================================================= */
-
 const HK = {
 
-    /* ---------- 1. CONFIGURACIÓN ---------- */
-
     config: {
-        // ✏️ COMPLETAR: número de WhatsApp con código de país, sin "+" ni espacios.
-        // Ejemplo Bolivia: "59170000000"
-        whatsapp: "591XXXXXXXX"
+        whatsapp: "591 63377188"
     },
 
-    /* ---------- FUNCIONES COMPARTIDAS (las usan pedidos.js y contacto.js) ---------- */
-
-    // ¿Ya se escribió un número real de WhatsApp?
     whatsappConfigurado: function () {
         return /^\d{8,15}$/.test(this.config.whatsapp);
     },
 
-    // Abre WhatsApp con el texto listo. Devuelve false si falta configurar el número.
     enviarWhatsApp: function (texto) {
         if (!this.whatsappConfigurado()) return false;
 
@@ -36,7 +18,6 @@ const HK = {
         return true;
     },
 
-    // Muestra un mensaje arriba del formulario. tipo: "error" | "ok"
     mostrarMensaje: function (formulario, tipo, texto) {
         const caja = formulario.querySelector(".form-feedback");
         if (!caja) return;
@@ -46,8 +27,6 @@ const HK = {
         caja.scrollIntoView({ behavior: "smooth", block: "nearest" });
     },
 
-    // Valida los campos usando los atributos del HTML (required, type, pattern, title).
-    // Marca en rojo los que fallan y devuelve true si todo está bien.
     validarFormulario: function (formulario) {
         let primerError = null;
 
@@ -82,7 +61,6 @@ const HK = {
         return true;
     },
 
-    // Quita el error de un campo apenas la persona vuelve a escribir
     limpiarErroresAlEscribir: function (formulario) {
         formulario.addEventListener("input", function (e) {
             const contenedor = e.target.parentElement;
@@ -97,9 +75,6 @@ const HK = {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    /* ---------- 2. ANIMACIÓN AL HACER SCROLL ---------- */
-    // Los estilos están en style.css (.animate-box / .in-view)
 
     const bloques = document.querySelectorAll(".animate-box");
 
@@ -122,10 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-    /* ---------- 3. BOTÓN SUBIR ---------- */
-    // El desplazamiento suave lo hace el CSS (scroll-behavior: smooth)
-
     const botonArriba = document.querySelector(".gototop");
 
     if (botonArriba) {
@@ -136,11 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("scroll", actualizarBoton, { passive: true });
         actualizarBoton();
     }
-
-
-    /* ---------- 4. IMÁGENES DE REEMPLAZO ---------- */
-    // Si una imagen no carga (todavía no la subiste), su contenedor recibe
-    // la clase .sin-imagen y el CSS muestra un recuadro "Imagen pendiente".
 
     const imagenes = document.querySelectorAll(
         ".img-frame img, .fh5co-item-img img, #menuCarousel .item img"
@@ -157,9 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
             img.addEventListener("error", marcarSinImagen);
         }
     });
-
-
-    /* ---------- 5. AÑO DEL FOOTER ---------- */
 
     document.querySelectorAll("[data-year]").forEach(function (el) {
         el.textContent = new Date().getFullYear();

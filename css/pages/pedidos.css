@@ -1,14 +1,8 @@
-/* =========================================================
-   PÁGINA: PEDIDOS
-   (los estilos del formulario están en style.css → .form-card)
-========================================================= */
-
 .pedido-nota {
     max-width: 560px;
     margin: 0 auto;
 }
 
-/* Campo de dirección: aparece solo si el pedido es delivery */
 #direccion-container {
     transition: var(--transicion);
 }

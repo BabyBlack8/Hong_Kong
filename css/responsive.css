@@ -1,11 +1,3 @@
-/* =========================================================
-   RESPONSIVE (se carga al final para poder sobrescribir)
-   Tablets ≤ 991px · Celulares ≤ 767px · Celulares chicos ≤ 480px
-========================================================= */
-
-
-/* ---------- TABLETS ---------- */
-
 @media screen and (max-width: 991px) {
 
     .fh5co-section {

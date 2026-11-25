@@ -1,8 +1,3 @@
-/* =========================================================
-   CONTACTO.JS · formulario de contacto → WhatsApp
-   Necesita que main.js (objeto HK) se haya cargado antes.
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const formulario = document.getElementById("contacto-form");

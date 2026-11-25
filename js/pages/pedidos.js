@@ -1,8 +1,3 @@
-/* =========================================================
-   PEDIDOS.JS · formulario de pedido → WhatsApp
-   Necesita que main.js (objeto HK) se haya cargado antes.
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const formulario = document.getElementById("pedido-form");
@@ -11,15 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const tipoPedido = document.getElementById("tipo-pedido");
     const direccionContenedor = document.getElementById("direccion-container");
     const direccion = document.getElementById("direccion");
-
-    // Los valores deben coincidir con los <option value="..."> del HTML
     const nombresTipo = {
         delivery: "Delivery (entrega a domicilio)",
         recojo: "Recojo en el local",
         local: "Consumo en el local"
     };
 
-    // La dirección solo se pide (y valida) cuando el pedido es delivery
     function actualizarDireccion() {
         const esDelivery = tipoPedido.value === "delivery";
 
